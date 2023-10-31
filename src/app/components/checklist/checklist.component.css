@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+h1 {
+  color: blue;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 12px;
+  width: 100%;
+}
+img {
+  height: 28px;
+}
+#add-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+a {
+  border: none;
+  background-color: #27c722;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff5e0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #257002;
+}
+
+button {
+  border: none;
+  font-size: 12px;
+  background-color: #4e4feb;
+  color: #fff5e0;
+  padding: 7.5px 20px;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #154682;
+}
+
+#delete-btn {
+  border: none;
+  background-color: #eb4e4e;
+  color: #fff5e0;
+  padding: 8px 24px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #f00f0f;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.li-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.btn-container {
+  display: flex;
+  margin-left: 20px;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.prioridade-baixa {
+  border-radius: 10px;
+  background-color: rgb(143, 143, 228);
+  padding: 2px 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.prioridade-media {
+  border-radius: 10px;
+  background-color: rgb(247, 174, 38);
+  color: white;
+  padding: 2px 10px;
+  font-weight: 700;
+}
+
+.prioridade-alta {
+  border-radius: 10px;
+  background-color: rgb(255, 100, 100);
+  color: white;
+  padding: 2px 10px;
+  font-weight: 700;
+}
+
+.prioridade-urgente {
+  border-radius: 10px;
+  background-color: rgb(119, 25, 119);
+  color: white;
+  padding: 2px 10px;
+  font-weight: 700;
+}
+
+.resolvido {
+  border-radius: 10px;
+  background-color: rgb(8, 238, 111);
+  color: rgb(0, 0, 0);
+  padding: 2px 10px;
+  font-weight: 700;
+}
+
+.itemConforme {
+  text-decoration: none;
+}
+
+.li-container div {
+  display: flex;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

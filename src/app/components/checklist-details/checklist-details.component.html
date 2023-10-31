@@ -1,0 +1,35 @@
+<div class="container" *ngIf="item">
+  <h1>Item do checklist</h1>
+  <p>ID: {{ item.id }}</p>
+  <p>Descrição: {{ item.item }}</p>
+  <p>Observações:</p>
+  <input type="text" name="obs" id="obs" [(ngModel)]="item.observacoes" />
+  <p>Prioridade</p>
+  <select name="priority" id="priority" [(ngModel)]="item.prioridade">
+    <option value="Baixa">Baixa</option>
+    <option value="Média">Média</option>
+    <option value="Alta">Alta</option>
+    <option value="Urgente">Urgente</option></select
+  ><br />
+  <p>Responsável:</p>
+  <input
+    type="text"
+    name="responsavel"
+    id="responsavel"
+    [(ngModel)]="item.responsavel"
+  />
+  <p>Resolvido: {{ item.resultado }}</p>
+  <select name="resultado" id="resultado" [(ngModel)]="item.resultado">
+    <option value="true">Sim</option>
+    <option value="false">Não</option></select
+  ><br />
+  <br />
+  <div class="flex">
+    <button (click)="salvarItem(item)">
+      <img src="../../../assets/save.svg" alt="salvar" />
+    </button>
+    <button id="btn-voltar" (click)="verificarItem(item)">
+      <img src="../../../assets/voltar.svg" alt="voltar" />
+    </button>
+  </div>
+</div>

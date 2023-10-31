@@ -1,0 +1,55 @@
+<div id="add-item">
+  <input type="text" placeholder="adicionar novo item" [(ngModel)]="novoItem" />
+  <button (click)="adicionarNovoItem()">
+    <img src="../../../assets/save.svg" alt="salvar" />
+  </button>
+</div>
+<p>Taxa de aderência: {{ taxaAderencia | number : "1.2-2" }} %</p>
+<section [ngClass]="{ loading: !itemsList.length }">
+  <ul *ngIf="itemsList.length">
+    <li *ngFor="let item of itemsList; let i = index">
+      <div class="li-container">
+        <div>
+          <label for="check"
+            >{{ item.item }}
+            <div>
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="check"
+                [checked]="item.resultado == true"
+                id="check"
+                (click)="setResultado(item.id)"
+              />
+            </div>
+            <div *ngIf="!item.resultado && item.prioridade">
+              <div
+                [ngClass]="{
+                  'prioridade-baixa': item.prioridade === 'Baixa',
+                  'prioridade-media': item.prioridade === 'Média',
+                  'prioridade-alta': item.prioridade === 'Alta',
+                  'prioridade-urgente': item.prioridade === 'Urgente'
+                }"
+              >
+                Prioridade: {{ item.prioridade }}
+              </div>
+            </div>
+          </label>
+          <div *ngIf="item.resultado">
+            <div [ngClass]="'resolvido'" class="itemConforme">
+              Está conforme
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <a [href]="'/seeItemDetails/' + item.id">
+            <img src="../../../assets/seemore.svg" alt="ver" />
+          </a>
+          <button (click)="removerItem(item.id)" id="delete-btn">
+            <img src="../../../assets/delete.svg" alt="remover" />
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

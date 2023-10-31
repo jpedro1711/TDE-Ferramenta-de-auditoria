@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+h1 {
+  color: blue;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 12px;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#btn-voltar {
+  border: none;
+  background-color: #27c722;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff5e0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #257002;
+}
+
+button {
+  border: none;
+  font-size: 12px;
+  background-color: #4e4feb;
+  color: #fff5e0;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #154682;
+}
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo para o elemento <select> */
+select {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  outline: none; /* Remove a borda de foco padrão */
+  transition: border-color 0.3s;
+}
+
+img {
+  height: 22px;
+}
+
+input {
+  width: 250px;
+}
+
+/* Estilo para o elemento <select> quando estiver em foco */
+select:focus {
+  border-color: #007bff; /* Cor da borda quando em foco */
+}
+
+/* Estilo para as opções dentro do <select> */
+select option {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Estilo para as opções quando hover */
+select option:hover {
+  background-color: #007bff; /* Cor de destaque ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para as opções selecionadas */
+select option:checked {
+  background-color: #007bff; /* Cor de destaque da opção selecionada */
+  color: #fff; /* Cor do texto da opção selecionada */
+}
+
+/* Estilo para a seta de dropdown (alguns navegadores não suportam a estilização da seta) */
+select::-ms-expand {
+  display: none; /* Remove a seta em navegadores IE */
+}
+
+/* Estilo para navegadores que suportam pseudo-elementos */
+select::before {
+  content: "\25BC"; /* Símbolo de seta ▼ */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 16px;
+  pointer-events: none; /* Evita a interação com o pseudo-elemento */
+}
+
+/* Estilo para navegadores que suportam pseudo-elementos no hover */
+select:hover::before {
+  color: #007bff; /* Cor da seta ao passar o mouse */
+}
